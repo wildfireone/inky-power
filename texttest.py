@@ -10,7 +10,7 @@ img = Image.new("P", (inky_display.WIDTH, inky_display.HEIGHT))
 draw = ImageDraw.Draw(img)
 font = ImageFont.truetype(FredokaOne, 36)
 
-message = "Hello, World!"
+message = "Hi Pam"
 w, h = font.getsize(message)
 x = (inky_display.WIDTH / 2) - (w / 2)
 y = (inky_display.HEIGHT / 2) - (h / 2)
