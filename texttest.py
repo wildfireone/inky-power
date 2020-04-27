@@ -1,6 +1,8 @@
 from inky import InkyWHAT
 from PIL import Image, ImageFont, ImageDraw
 from font_fredoka_one import FredokaOne
+import json
+import requests
 
 inky_display = InkyWHAT("red")
 inky_display.set_border(inky_display.WHITE)
