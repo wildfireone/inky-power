@@ -10,6 +10,12 @@ img = Image.new("P", (inky_display.WIDTH, inky_display.HEIGHT))
 draw = ImageDraw.Draw(img)
 font = ImageFont.truetype(FredokaOne, 36)
 
+
+# Make a get request to get the latest position of the international space station from the opennotify api.
+response = requests.get("https://pvoutput.org/service/r2/getoutput.jsp?key=4d57028d8a05f4c6a593d97a5a5bfe48f4cb261e&sid=41079")
+# Print the status code of the response.
+print(response.status_code)
+
 message = "Hi Pam"
 w, h = font.getsize(message)
 x = (inky_display.WIDTH / 2) - (w / 2)
