@@ -17,7 +17,7 @@ font = ImageFont.truetype(FredokaOne, 36)
 response = requests.get("https://pvoutput.org/service/r2/getoutput.jsp?key=4d57028d8a05f4c6a593d97a5a5bfe48f4cb261e&sid=41079")
 # Print the status code of the response.
 data = response.content.split(";")
-for day in data
+for day in data:
     print("Date: {0}, Power : {1}, Weather : {2}" %(day[0], day[1], day[7])) 
 
 message = "Hi Pam"
