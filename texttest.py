@@ -17,7 +17,12 @@ font = ImageFont.truetype(FredokaOne, 36)
 response = requests.get("https://pvoutput.org/service/r2/getoutput.jsp?key=4d57028d8a05f4c6a593d97a5a5bfe48f4cb261e&sid=41079")
 # Print the status code of the response.
 data = response.content.split(";")
+daysago = 5;
+index =0;
 for day in data:
+    index += 1
+    if index == limit
+        break
     daydata = day.split(",");
     print("Date: {0}, Power : {1}, Weather : {2}".format(daydata[0], daydata[1], daydata[7])) 
 
