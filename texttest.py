@@ -40,10 +40,16 @@ for day in data:
 left = [1, 2, 3, 4, 5] 
   
 # heights of bars 
-height = power
+#height = power
   
 # labels for bars 
-tick_label = dates
+#tick_label = dates
+
+# heights of bars 
+height = [10, 24, 36, 40, 5] 
+  
+# labels for bars 
+tick_label = ['one', 'two', 'three', 'four', 'five'] 
 
 plt.figure(figsize=(2, 1.5))
 # plotting a bar chart 
