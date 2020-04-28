@@ -51,7 +51,7 @@ tick_label = dates
 # labels for bars 
 #tick_label = ['one', 'two', 'three', 'four', 'five'] 
 
-plt.figure(figsize=(4, 3), dpi=50)
+plt.figure(figsize=(4, 3), dpi=100)
 # plotting a bar chart 
 plt.bar(left, height, tick_label = tick_label, 
         width = 0.8, color = ['red']) 
@@ -71,15 +71,17 @@ plt.savefig('test.png')
 #plt.savefig(buf, format='png')
 #buf.seek(0)
 #im = Image.open(buf)
+img = Image.open("test.png")
+inky_display.set_image(img)
+inky_display.show()
 
 
-
-message = "Hi Pam"
+#message = "Hi Pam"
 #w, h = font.getsize(message)
 #x = (inky_display.WIDTH / 2) - (w / 2)
 #y = (inky_display.HEIGHT / 2) - (h / 2)
 
 #draw.text((x, y), message, inky_display.RED, font)
-inky_display.set_image(im)
-inky_display.show()
+#inky_display.set_image(im)
+#inky_display.show()
 #buf.close()
