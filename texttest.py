@@ -51,7 +51,7 @@ height = [10, 24, 36, 40, 5]
 # labels for bars 
 tick_label = ['one', 'two', 'three', 'four', 'five'] 
 
-plt.figure(figsize=(2, 1.5))
+plt.figure(figsize=(2, 1.5), dpi=96)
 # plotting a bar chart 
 plt.bar(left, height, tick_label = tick_label, 
         width = 0.8, color = ['red', 'green']) 
