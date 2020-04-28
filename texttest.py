@@ -51,7 +51,7 @@ height = [10, 24, 36, 40, 5]
 # labels for bars 
 tick_label = ['one', 'two', 'three', 'four', 'five'] 
 
-plt.figure(figsize=(2, 1.5), dpi=96)
+plt.figure(figsize=(4, 3), dpi=50)
 # plotting a bar chart 
 plt.bar(left, height, tick_label = tick_label, 
         width = 0.8, color = ['red', 'green']) 
@@ -65,10 +65,12 @@ plt.title('My bar chart!')
   
 # function to show the plot 
 #plt.show() 
-buf = io.BytesIO()
-plt.savefig(buf, format='png')
-buf.seek(0)
-im = Image.open(buf)
+
+plt.savefig('test.png')
+#buf = io.BytesIO()
+#plt.savefig(buf, format='png')
+#buf.seek(0)
+#im = Image.open(buf)
 
 
 
@@ -80,4 +82,4 @@ message = "Hi Pam"
 #draw.text((x, y), message, inky_display.RED, font)
 inky_display.set_image(im)
 inky_display.show()
-buf.close()
+#buf.close()
