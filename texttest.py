@@ -43,13 +43,13 @@ left = [1, 2, 3, 4, 5]
 height = power
   
 # labels for bars 
-tick_label = dates
+#tick_label = dates
 
 # heights of bars 
 #height = [10, 24, 36, 40, 5] 
   
 # labels for bars 
-#tick_label = ['one', 'two', 'three', 'four', 'five'] 
+tick_label = ['one', 'two', 'three', 'four', 'five'] 
 
 plt.figure(figsize=(4, 3), dpi=50)
 # plotting a bar chart 
