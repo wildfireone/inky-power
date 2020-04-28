@@ -28,7 +28,7 @@ for day in data:
     index += 1
     daydata = day.split(",")
     date  = daydata[0][6]+daydata[0][7]+"/"+daydata[0][4]+daydata[0][5]+"/"+daydata[0][0]+daydata[0][1]+daydata[0][2]+daydata[0][3]
-    dates.append(date)
+    dates.append(str(date))
     power.append(int(daydata[1]))
     weather.append(daydata[7])
     print("Date: {0}, Power : {1}, Weather : {2}".format(date, daydata[1], daydata[7])) 
@@ -43,13 +43,13 @@ left = [1, 2, 3, 4, 5]
 height = power
   
 # labels for bars 
-#tick_label = dates
+tick_label = dates
 
 # heights of bars 
 #height = [10, 24, 36, 40, 5] 
   
 # labels for bars 
-tick_label = ['one', 'two', 'three', 'four', 'five'] 
+#tick_label = ['one', 'two', 'three', 'four', 'five'] 
 
 plt.figure(figsize=(4, 3), dpi=50)
 # plotting a bar chart 
