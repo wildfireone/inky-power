@@ -21,10 +21,11 @@ daysago = 5;
 index =0;
 for day in data:
     index += 1
-    if index == daysago:
-        break
     daydata = day.split(",");
     print("Date: {0}, Power : {1}, Weather : {2}".format(daydata[0], daydata[1], daydata[7])) 
+    
+    if index == daysago:
+        break
 
 message = "Hi Pam"
 w, h = font.getsize(message)
