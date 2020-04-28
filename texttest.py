@@ -26,7 +26,7 @@ index =0
 for day in data:
     index += 1
     daydata = day.split(",")
-    date  = daydata[6]+daydata[7]+"/"+daydata[4]+daydata[5]+"/"+daydata[0]+daydata[1]+daydata[2]+daydata[3]
+    date  = daydata[0][6]+daydata[0][7]+"/"+daydata[0][4]+daydata[0][5]+"/"+daydata[0][0]+daydata[0][1]+daydata[0][2]+daydata[0][3]
     dates.append(date)
     power.append(daydata[1])
     weather.append(daydata[7])
