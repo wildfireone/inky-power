@@ -25,11 +25,11 @@ daysago = 5
 index =0
 for day in data:
     index += 1
-    daydata = day.split(",");
+    daydata = day.split(",")
     date  = daydata[6]+daydata[7]+"/"+daydata[4]+daydata[5]+"/"+daydata[0]+daydata[1]+daydata[2]+daydata[3]
-    dates.apppend(date)
+    dates.append(date)
     power.append(daydata[1])
-    weather.apppend(daydata[7])
+    weather.append(daydata[7])
     print("Date: {0}, Power : {1}, Weather : {2}".format(date, daydata[1], daydata[7])) 
     if index == daysago:
         break
