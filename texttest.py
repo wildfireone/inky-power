@@ -19,7 +19,7 @@ weather =[]
 # Make a get request to get the latest position of the international space station from the opennotify api.
 response = requests.get("https://pvoutput.org/service/r2/getoutput.jsp?key=4d57028d8a05f4c6a593d97a5a5bfe48f4cb261e&sid=41079")
 # Print the status code of the response.
-dataencode = response.content.encode('utf-8')
+dataencode = response.content.decode('utf-8')
 data = dataencode.split(";")
 daysago = 5
 index =0
