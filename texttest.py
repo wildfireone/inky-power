@@ -4,6 +4,7 @@ from font_fredoka_one import FredokaOne
 import json
 import requests
 import matplotlib.pyplot as plt 
+import io
 
 inky_display = InkyWHAT("red")
 inky_display.set_border(inky_display.WHITE)
@@ -56,13 +57,20 @@ plt.ylabel('y - axis')
 plt.title('My bar chart!') 
   
 # function to show the plot 
-plt.show() 
+#plt.show() 
+buf = io.BytesIO()
+plt.savefig(buf, format='png')
+buf.seek(0)
+im = Image.open(buf)
+
+
 
 message = "Hi Pam"
-w, h = font.getsize(message)
-x = (inky_display.WIDTH / 2) - (w / 2)
-y = (inky_display.HEIGHT / 2) - (h / 2)
+#w, h = font.getsize(message)
+#x = (inky_display.WIDTH / 2) - (w / 2)
+#y = (inky_display.HEIGHT / 2) - (h / 2)
 
-draw.text((x, y), message, inky_display.RED, font)
-inky_display.set_image(img)
+#draw.text((x, y), message, inky_display.RED, font)
+inky_display.set_image(im)
 inky_display.show()
+buf.close()
