@@ -45,7 +45,7 @@ height = power
 # labels for bars 
 tick_label = dates
 
-plt.figure(figsize=(400, 300), dpi=1)
+plt.figure(figsize=(1, 1))
 # plotting a bar chart 
 plt.bar(left, height, tick_label = tick_label, 
         width = 0.8, color = ['red', 'green']) 
