@@ -18,8 +18,8 @@ response = requests.get("https://pvoutput.org/service/r2/getoutput.jsp?key=4d570
 # Print the status code of the response.
 data = response.content.split(";")
 for day in data:
-    print(day[0]);
-    #print("Date: {0}, Power : {1}, Weather : {2}".format(day[0], day[1], day[7])) 
+    daydata = day.split(",");
+    print("Date: {0}, Power : {1}, Weather : {2}".format(daydata[0], daydata[1], daydata[7])) 
 
 message = "Hi Pam"
 w, h = font.getsize(message)
