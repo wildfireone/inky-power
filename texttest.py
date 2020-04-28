@@ -29,7 +29,7 @@ for day in data:
     daydata = day.split(",")
     date  = daydata[0][6]+daydata[0][7]+"/"+daydata[0][4]+daydata[0][5]+"/"+daydata[0][0]+daydata[0][1]+daydata[0][2]+daydata[0][3]
     dates.append(date)
-    power.append(daydata[1])
+    power.append(int(daydata[1]))
     weather.append(daydata[7])
     print("Date: {0}, Power : {1}, Weather : {2}".format(date, daydata[1], daydata[7])) 
     if index == daysago:
