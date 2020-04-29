@@ -51,7 +51,11 @@ tick_label = dates
 # labels for bars 
 #tick_label = ['one', 'two', 'three', 'four', 'five'] 
 
-plt.figure(figsize=(8, 6), dpi=50)
+fig = plt.gcf()
+DPI = fig.get_dpi()
+fig.set_size_inches(400/float(DPI),300/float(DPI))
+
+#plt.figure(figsize=(8, 6), dpi=50)
 # plotting a bar chart 
 plt.bar(left, height, tick_label = tick_label, 
         width = 0.8, color = ['red']) 
